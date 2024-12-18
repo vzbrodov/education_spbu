@@ -37,6 +37,22 @@
 			\end{enumerate}
 	\end{solution} 
 	
+		\begin{problem}
+		Что такое ICRS?
+	\end{problem}
+	\begin{solution}
+		International Celestial Reference System — международная небесная система координат. Центр — барицентр Солнечной системы. Оси зафиксированы в пространстве относительно внегалактических радиоисточников (направление выбрано по осям в FK5). Основная плоскость — средний экватор FK5, ось Х направлена в точку весеннего равноденствия на эпоху J2000. Шкала времени — TCB (Barycentric Coordinate Time).
+	\end{solution}
+	
+	\begin{problem}
+		Что такое ITRS?
+	\end{problem}
+	
+	\begin{solution}
+		International Terrestrial Reference System — международная земная система координат. Центр — в геоцентре Земли (включая океан и атмосферу). Ориентация осей определяется из наблюдений IERS (international Earth Rotation and Reference Systems Service). Ось z является средней осью вращения Земли и направлена в опорный полюс (IRP — IERS Reference Pole). Ось x лежит в плоскости опорного меридиана (IRM — IERS Reference	Meridian). Единицей длины является метр, шкалой времени — шкала TCG (Geocentric	Coordinate Time (англ.) — геоцентрическое координационное время). Вращается вместе с
+		Землей.
+	\end{solution}
+	
 	\begin{problem}
 	Чем реализована ICRS в оптическом диапазоне?
 	\end{problem}
@@ -55,21 +71,6 @@
 			\item 303 defining радиоисточника.
 			\item Изменен подход к выбору defining источников, предприняты меры по их равномерному распределению.
 		\end{itemize}
-	\end{solution}
-		\begin{problem}
-		Что такое ICRS?
-	\end{problem}
-	\begin{solution}
-		International Celestial Reference System — международная небесная система координат. Центр — барицентр Солнечной системы. Оси зафиксированы в пространстве относительно внегалактических радиоисточников (направление выбрано по осям в FK5). Основная плоскость — средний экватор FK5, ось Х направлена в точку весеннего равноденствия на эпоху J2000. Шкала времени — TCB (Barycentric Coordinate Time).
-	\end{solution}
-	
-	\begin{problem}
-		Что такое ITRS?
-	\end{problem}
-	
-	\begin{solution}
-		International Terrestrial Reference System — международная земная система координат. Центр — в геоцентре Земли (включая океан и атмосферу). Ориентация осей определяется из наблюдений IERS (international Earth Rotation and Reference Systems Service). Ось z является средней осью вращения Земли и направлена в опорный полюс (IRP — IERS Reference Pole). Ось x лежит в плоскости опорного меридиана (IRM — IERS Reference	Meridian). Единицей длины является метр, шкалой времени — шкала TCG (Geocentric	Coordinate Time (англ.) — геоцентрическое координационное время). Вращается вместе с
-		Землей.
 	\end{solution}
 	\begin{problem}
 		Что такое RF?
@@ -126,7 +127,6 @@
 	
 	\begin{solution}
 		Абсолютный способ определения координат заключается в нахождении координат по непосредственному показанию приборов и последующей редукции данных (определения погрешностей), без использования опорных объектов.
-		определение координат, не зная значение предварительной величины(???)
 	\end{solution}
 	
 	\begin{problem}
@@ -150,8 +150,8 @@
 	\begin{solution}
 		
 		\begin{itemize}
-			\item прямоугольных координат (x, y, z) при повороте в положительном направлении (против часовой стрелки, если смотреть с конца оси) системы координат вокруг оси x,y,z	
-			на угол$\alpha$,$\beta$,$\gamma$.
+			\item прямоугольных координат (x, y, z) при повороте в положительном направлении (против часовой стрелки, если смотреть с конца оси) системы координат вокруг оси x, y, z	
+			на угол $\alpha$, $\beta$, $\gamma$.
 		\end{itemize}
 		
 			\[
@@ -204,21 +204,14 @@
 	\end{solution}
 	
 	
-	\begin{problem}
-		Для чего использовался картограф в проекте HIPPARCOS?
-	\end{problem}
-	
-	\begin{solution}
-		измерения для каталога Tycho
-	\end{solution}
 	
 \section{Задержки}
 		\begin{problem}
 			Основное уравнение РСДБ:
 		\end{problem}
 		
-		\begin{solution}
-			$c\tau = e\cos\delta \cos h + p \sin\delta$,$ e = b \cos\psi $, $ p = b \sin\psi $
+		\begin{solution}\\
+			$$c\tau = e\cos\delta \cos h + p \sin\delta$$ $$ e = b \cos\psi $$ $$ p = b \sin\psi $$
 			
 			
 			\begin{itemize}
@@ -238,6 +231,7 @@
 		
 		\begin{solution}
 			Геометрическая задержка связана с базой и скоростью света $$(b,\rho) = c\tau_g$$
+			$\rho$ -- направление на радиоисточник
 		\end{solution}
 		
 		
@@ -292,7 +286,7 @@
 		\begin{solution}
 			\begin{itemize}
 				\item $x_p$, $y_p$ -- координаты полюса, фотозенитная труба, ГНСС, РСДБ, лазерная локация;
-				\item $UT1-UTC$ -- угол собственного вращения(?), пассажный инструмент, часы, ГНСС,
+				\item $UT1-UTC$ -- угол собственного вращения, пассажный инструмент, часы, ГНСС,
 				РСДБ;
 				\item $LOD = (UT1 - UTC)$ -- избыточная продолжительность суток;
 				\item $\Delta\epsilon$ -- угол прецессии, РСДБ;
@@ -307,10 +301,10 @@
 			
 			Период Эйлера — период свободной нутации — равен 305 дней, найден теоретически, из
 			предположения, что Земля — абсолютно твёрдое тело Формула Коткинского:
-			$$\phi - \phi_{ср}=x_p \cos\lambda + y_p\sin\lambda$$
+			$$\phi - \phi_{cp}=x_p \cos\lambda + y_p\sin\lambda$$
 			\begin{itemize}
 				\item $\phi$ -- широта пункта наблюдения;
-				\item $\phi_{ср}$ -- средняя широта пункта;
+				\item $\phi_{cp}$ -- средняя широта пункта;
 				\item $x_p$, $y_p$ -- координаты полюса;
 				\item $\lambda$ -- долгота пункта.
 			\end{itemize}
@@ -329,8 +323,8 @@
 			$$r = R + \rho$$
 			\begin{itemize}
 				\item $r$ -- радиус-вектор ИСЗ в геоцентрической сист.коорд.;
-				\item $\rho$ -- рад.-вект. от точки на Земле до спутника (топоцентрическая сист.коорд.);
-				\item $R$, $y_p$ -- рад.-вект. этой точки в геоцентрической сист.коорд.
+				\item $\rho$ -- радиус-вектор от точки на Земле до спутника (топоцентрическая сист.коорд.);
+				\item $R$ -- радиус-вектор этой точки в геоцентрической системе координат.
 			\end{itemize}
 		\end{solution}
 		
@@ -339,7 +333,7 @@
 		\end{problem}
 		
 		\begin{solution}
-			$$r = \frac{1}{pi^{''}} = 100 pc \pm 10 (10\% of 100pc)$$
+			$$r = \frac{1}{\pi^{''}} = 100 pc \pm 10 ( 10\%)$$
 		\end{solution}
 		
 		
@@ -396,8 +390,8 @@
 		\end{problem}
 		
 		\begin{solution}
-			UT2=UT1+$\Delta$Ts, $\Delta T_s$-сезонная
-		поправка.
+			UT2=UT1+$\Delta$Ts, $\Delta T_s$-поправка на сезонные
+вариации.
 		\end{solution}
 		
 		\begin{problem}
@@ -464,7 +458,7 @@
 		\end{problem}
 		
 		\begin{solution}
-			$$\theta= \theta_1\cdot D_1/D_2=0,000026$$
+			$$\theta= \theta_1\cdot D_1/D_2=0,000025$$
 		\end{solution}
 		
 		\begin{problem}
@@ -540,8 +534,7 @@
 		\end{problem}
 		
 		\begin{solution}
-			UT1 исправл.за движ.полюсов,
-			$UT1=UT0+\Delta\lambda$, $\Delta\lambda$ --поправка из-за движения полюса.
+			$UT1=UT0+\Delta\lambda$, $\Delta\lambda$ --поправка из-за движения полюсов.
 		\end{solution}
 		
 		\begin{problem}
